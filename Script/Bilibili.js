@@ -115,7 +115,7 @@ if (url.indexOf(path1) != -1) {
 }
 
 if (url.indexOf(path2) != -1) {
-  let blacklist = [];
+  let blacklist = ['央视','人民网','观察者网','新华社','共青团'];
   body.data.items = body.data.items.filter(function(item) {
     if (['ad_web_s', 'ad_web', 'live', 'banner', 'search_subscribe'].includes(item.card_goto)) {
       return false;
