@@ -1,12 +1,9 @@
 #!name=APPs Customized
-#!desc=WeChat 115lx Blued BurnPics & ZhiHu UA
+#!desc=WeChat 115lx Blued BurnPics
 #!system=ios
 
 [URL Rewrite]
 ^http:\/\/115\.com\/\?ct=sign$ http://115.com/lx?taskdg=1 header
-
-[Header Rewrite]
-^https?:\/\/www\.zhihu\.com\/ header-replace User-Agent Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Safari/605.1.15
 
 [Script]
 Wechat.js = type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com/mp/getappmsgad,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js,script-update-interval=0
@@ -14,4 +11,4 @@ Wechat.js = type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com/mp/getapp
 Blued.js = type=http-request,pattern=https:\/\/.*burn-chatfiles\.bldimg\.com\/,script-path=https://raw.githubusercontent.com/wubulaba/surgescript/master/Script/Blued.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% webapi.115.com, mp.weixin.qq.com, *burn-chatfiles.bldimg.com, www.zhihu.com
+hostname = %APPEND% webapi.115.com, mp.weixin.qq.com, *burn-chatfiles.bldimg.com
